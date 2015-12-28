@@ -13,10 +13,10 @@ menu:
     directory: /
     icon: icon-home
   - page: 所有文章
-    directory: archives/
+    directory: archives
     icon: icon-archive
   - page: 自介
-    directory: about/
+    directory: about
     icon: icon-about
   - page: RSS
     directory: rss.xml
