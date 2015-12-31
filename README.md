@@ -38,7 +38,7 @@ baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 
 menu:
   - page: home
-    directory: /
+    directory: .
     icon: icon-home
   - page: archive
     directory: archives/
@@ -90,6 +90,9 @@ You can control the abstract of a post shown at index, by either filling a `desc
 
 #### Table of Contents
 TOC in a post can be enabled by adding a `toc: true` item in `front-matter`.
+
+#### Comments
+Comment feature of each post and page can be enabled (default) and disabled by adding a `comments: true` or `comments: false` in `front-matter`. This could be useful when you want comment feature for guestbook page, but don't want comment feature for about page.
 
 #### Syntax Highlighting
 Highlighted code showcase is supported, please set the `highlight` option in `_config.yml` of hexo directory like this:
