@@ -1,6 +1,6 @@
 fancybox: true ## If you want to use fancybox please set the value to true
-duoshuo: ## Your duoshuo_shortname, e.g. haomwei
-disqus: ## Your disqus_shortname, e.g. haomwei
+duoshuo: ## Your duoshuo_shortname, e.g. username
+disqus: ## Your disqus_shortname, e.g. username
 google_search: true ## Use Google search, true/false
 baidu_search: ## Use Baidu search, true/false
 swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
@@ -37,3 +37,10 @@ links:
     url: http://www.example2.com/
   - title: site-name3
     url: http://www.example3.com/
+
+# Static files
+js: js
+css: css
+
+# Theme version
+version: 0.0.0
