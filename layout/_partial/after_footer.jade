@@ -1,6 +1,6 @@
-if theme.fancybox
-  script(type='text/javascript', src=url_for(theme.js) + '/fancybox.pack.js' + '?v=' + theme.version)
-  script(type='text/javascript', src=url_for(theme.js) + '/jquery.fancybox.js' + '?v=' + theme.version)
+if theme.fancybox == true
+  script(type='text/javascript', src='//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js', async)
+  script(type='text/javascript', src=url_for(theme.js) + '/fancybox.js' + '?v=' + theme.version, async)
   link(rel='stylesheet', type='text/css', href=url_for(theme.css) + '/jquery.fancybox.css' + '?v=' + theme.version)
 
 if theme.duoshuo
@@ -41,6 +41,16 @@ if theme.swiftype
 
     _st('install','#{theme.swiftype}','2.0.0');
 
+if theme.self_search == true
+  script(type='text/javascript', src=url_for(theme.js) + '/search.js' + '?v=' + theme.version)
+  script.
+     var search_path = '#{config.search.path}';
+     if (search_path.length == 0) {
+        search_path = 'search.xml';
+     }
+     var path = '#{config.root}' + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+
 if theme.google_analytics
   script.
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -58,6 +68,12 @@ if theme.baidu_analytics
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
       })();
+
+if page.mathjax
+  include mathjax
+
+if page.mathjax2
+  include mathjax2
 
 script(type='text/javascript', src=url_for(theme.js) + '/codeblock-resizer.js' + '?v=' + theme.version)
 script(type='text/javascript', src=url_for(theme.js) + '/smartresize.js' + '?v=' + theme.version)
